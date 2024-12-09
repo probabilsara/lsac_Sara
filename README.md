@@ -1,5 +1,5 @@
+Pentru a rula aplicatiile se va folosi extensia Live Server (pagina homepage nelogat.html , "Open with Live Server")
 # Proba-IT-2024-Template
-
 ### Acest template public poate fi folosit pentru a vă crea repository-ul pentru proba tehnică. El permite și crearea automată de issue-uri, în concordanță cu task-urile probei:
 * Homepage
 * Profile

@@ -68,6 +68,7 @@ body {
 }
 .background {
     position: absolute; /* Allows precise positioning */
+    z-index:1;
     top: 0;
     left: 0;
     width: 100%; /* Adjust as needed */
@@ -164,6 +165,9 @@ body {
 
 /*Sign in*/
 .card {
+    position: relative; /* Keep card above background */
+    z-index: 5; /* Lower than input fields but higher than background */
+    position: relative;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     width: 300px;
@@ -190,35 +194,39 @@ body {
     margin-top:20px;
     margin-bottom:70px;
 }
-.card input{
-    display:block;
+.card input {
+    display: block;
     align-items: center;
-    color:white;
-    background:#00236D; 
+    color: white; /* Ensures text inside the input is visible */
+    background: #00236D; /* Matches the card background */
     padding: 10px;
-    font-size: 16px; 
-    width: 100%; /* Adjust input width if necessary */
-    box-sizing: border-box; /* Ensures padding is included in the width */
+    font-size: 16px;
+    width: 100%; /* Ensures input fills card width */
+    box-sizing: border-box; /* Includes padding in width */
+    border: 2px solid white; /* Add a border for visibility */
     margin-bottom: 15px;
+    border-radius: 5px; /* Optional for a rounded look */
+    position: relative; /* Ensures it respects stacking order */
+    z-index: 10;
+}
+.card input:focus {
+    outline: 2px solid #009C41; /* Green border when focused */
 }
 .card a{
     display: block;
     color:white;
     text-align: center;
 }
-.Buton_verde{
-    color:white;
+.Buton_verde {
+    color: white;
     background: #009C41;
-    border:5px solid #009C41 ;
-    border-radius:5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 60px;
-    padding-right: 60px;
-    margin-left:50px;
-    margin-bottom:25px;
-    margin-top:20px;
-    font-size: 30px;
+    border: 5px solid #009C41;
+    border-radius: 5px;
+    padding: 10px 60px; /* Adjusted padding for better proportions */
+    font-size: 20px;
+    margin: 20px auto 25px; /* Center the button horizontally */
+    display: block; /* Ensures it's treated as a block-level element */
+    text-align: center;
 }
 
 /* Profile */
